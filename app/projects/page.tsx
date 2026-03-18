@@ -10,7 +10,7 @@ export default function ProjectsPage() {
     <FadeInStagger className="space-y-12">
       <FadeInStaggerItem>
         <h1 className="text-3xl font-semibold tracking-tight mb-2">Projects</h1>
-        <p className="text-[var(--fg-muted)] text-sm sm:text-base">
+        <p className="text-fg-muted text-sm sm:text-base">
           A selection of personal and open-source projects I&apos;ve been working on, categorized by technology.
         </p>
       </FadeInStaggerItem>
@@ -18,7 +18,7 @@ export default function ProjectsPage() {
       <div className="space-y-10">
         {categories.map((category) => (
           <FadeInStaggerItem key={category as string}>
-            <h2 className="text-sm font-medium text-[var(--fg-muted)] uppercase tracking-wider mb-4 border-b border-[var(--border)] pb-2">
+            <h2 className="text-sm font-medium text-fg-muted uppercase tracking-wider mb-4 border-b border-border pb-2">
               {category as string}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2">
@@ -26,13 +26,13 @@ export default function ProjectsPage() {
                 <Link
                   key={project.id}
                   href={`/projects/${project.id}`}
-                  className="group flex flex-col justify-between h-full py-4 px-3 -mx-3 rounded-lg hover:bg-[var(--bg-hover)] transition-colors"
+                  className="group flex flex-col justify-between h-full py-4 px-3 -mx-3 rounded-lg hover:bg-bg-hover transition-colors"
                 >
                   <div>
-                    <h3 className="font-medium text-[var(--fg)] mb-2 group-hover:underline underline-offset-4 decoration-[var(--fg-muted)]">
+                    <h3 className="font-medium text-fg mb-2 group-hover:underline underline-offset-4 decoration-fg-muted">
                       {project.title}
                     </h3>
-                    <p className="text-sm text-[var(--fg-muted)] leading-relaxed">
+                    <p className="text-sm text-fg-muted leading-relaxed">
                       {project.description}
                     </p>
                   </div>
@@ -40,7 +40,7 @@ export default function ProjectsPage() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs px-2 py-0.5 rounded-md bg-[var(--tag-bg)] text-[var(--fg-muted)]"
+                        className="text-xs px-2 py-0.5 rounded-md bg-tag text-fg-muted"
                       >
                         {tag}
                       </span>

@@ -10,7 +10,7 @@ export default function Home() {
         <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-4">
           Hi, I'm Pratap 👋
         </h1>
-        <p className="text-[var(--fg-muted)] text-base sm:text-lg leading-relaxed max-w-lg">
+        <p className="text-fg-muted text-base sm:text-lg leading-relaxed max-w-lg">
           I'm a developer who enjoys building clean, efficient, and user-friendly
           web applications. Welcome to my corner of the internet — I write about
           code, design, and things I'm learning.
@@ -30,7 +30,7 @@ export default function Home() {
               target={href.startsWith("mailto") ? undefined : "_blank"}
               rel="noreferrer"
               aria-label={label}
-              className="flex items-center gap-1.5 text-sm text-[var(--fg-muted)] hover:text-[var(--fg)] transition-colors px-3 py-1.5 rounded-md hover:bg-[var(--bg-hover)]"
+              className="flex items-center gap-1.5 text-sm text-fg-muted hover:text-fg transition-colors px-3 py-1.5 rounded-md hover:bg-bg-hover"
             >
               {icon}
               <span className="hidden sm:inline">{label}</span>
@@ -41,7 +41,7 @@ export default function Home() {
 
       {/* ── Now / Focus ─────────────────────────────── */}
       <FadeInStaggerItem>
-        <h2 className="text-xs uppercase tracking-widest text-[var(--fg-muted)] font-medium mb-5">
+        <h2 className="text-xs uppercase tracking-widest text-fg-muted font-medium mb-5">
           Explore
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -65,12 +65,12 @@ export default function Home() {
             <Link
               key={href}
               href={href}
-              className="group flex flex-col gap-1 py-3 px-3 -mx-3 rounded-lg hover:bg-[var(--bg-hover)] transition-colors"
+              className="group flex flex-col gap-1 py-3 px-3 -mx-3 rounded-lg hover:bg-bg-hover transition-colors"
             >
-              <span className="font-medium text-[var(--fg)] text-sm group-hover:underline underline-offset-4 decoration-[var(--fg-muted)]">
+              <span className="font-medium text-fg text-sm group-hover:underline underline-offset-4 decoration-fg-muted">
                 {title} →
               </span>
-              <span className="text-xs text-[var(--fg-muted)] leading-relaxed">
+              <span className="text-xs text-fg-muted leading-relaxed">
                 {desc}
               </span>
             </Link>

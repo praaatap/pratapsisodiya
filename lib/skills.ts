@@ -5,7 +5,7 @@ export const skillGroups = [
   },
   {
     category: "Frameworks & Libraries",
-    skills: ["React", "Next.js", "Flutter", "TailwindCSS", "Node.js", "Express", "Dango", "FastAPI"]
+    skills: ["React", "Next.js", "Flutter", "TailwindCSS", "Node.js", "Express", "FastAPI"]
   },
   {
     category: "Database & Backend",

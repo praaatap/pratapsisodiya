@@ -1,26 +1,58 @@
 export const certifications = [
   {
-    id: "aws-solutions-architect",
-    title: "AWS Certified Solutions Architect – Associate",
-    issuer: "Amazon Web Services",
-    date: "2024",
-    link: "https://aws.amazon.com/verification",
-    image: "/certs/aws.png"
+    id: "redhat-python",
+    issuer: "Red Hat",
+    title: "Python Programming with Red Hat (AD141 - RHA) - Ver. 9.0",
+    date: "Dec 2025",
+    link: "#", // Replace with your actual credential link
   },
   {
-    id: "google-cloud-engineer",
-    title: "Associate Cloud Engineer",
-    issuer: "Google Cloud",
-    date: "2023",
-    link: "https://google.com/verification",
-    image: "/certs/google.png"
+    id: "azure-admin",
+    issuer: "Microsoft",
+    title: "Microsoft Certified: Azure Administrator Associate",
+    date: "Nov 2025",
+    link: "#", // e.g., link to Credential ID 502341D05549647D
   },
   {
-    id: "flutter-certified",
-    title: "Advanced Flutter & Dart Development",
-    issuer: "Udemy",
-    date: "2023",
-    link: "https://udemy.com/certificate",
-    image: "/certs/flutter.png"
+    id: "oracle-oci-foundations",
+    issuer: "Oracle",
+    title: "Oracle Cloud Infrastructure 2025 Certified Foundations Associate",
+    date: "Aug 2025",
+    link: "#",
+  },
+  {
+    id: "oracle-ai-foundations",
+    issuer: "Oracle",
+    title: "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
+    date: "Aug 2025",
+    link: "#",
+  },
+  {
+    id: "azure-fundamentals",
+    issuer: "Microsoft",
+    title: "Microsoft Certified: Azure Fundamentals",
+    date: "Jun 2025",
+    link: "#", // e.g., link to Credential ID 8DC40C5BD39F9AAA
+  },
+  {
+    id: "github-foundations",
+    issuer: "GitHub",
+    title: "GitHub Foundations",
+    date: "Apr 2025",
+    link: "#",
+  },
+  {
+    id: "aws-cloud-operations",
+    issuer: "Amazon Web Services (AWS)",
+    title: "AWS Academy Graduate - AWS Academy Cloud Operations",
+    date: "Apr 2025",
+    link: "#",
+  },
+  {
+    id: "aws-cloud-foundations",
+    issuer: "Amazon Web Services (AWS)",
+    title: "AWS Academy Graduate - AWS Academy Cloud Foundations",
+    date: "Apr 2025",
+    link: "#",
   }
 ];

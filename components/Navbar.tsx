@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Twitter, Mail } from 'lucide-react';
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 
@@ -97,9 +97,23 @@ export default function Navbar() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="mt-auto pb-12 text-sm text-fg-muted"
+              className="mt-auto pb-12 space-y-6"
             >
-              <p>© 2026 Pratap Singh. Built with Next.js.</p>
+              <div className="flex items-center gap-6">
+                <Link href="https://github.com/praaatap" target="_blank" className="text-fg-muted hover:text-white transition-colors">
+                  <Github size={24} />
+                </Link>
+                <Link href="https://www.linkedin.com/in/singhpratap999/" target="_blank" className="text-fg-muted hover:text-[#0A66C2] transition-colors">
+                  <Linkedin size={24} />
+                </Link>
+                <Link href="https://x.com/itspratap9" target="_blank" className="text-fg-muted hover:text-[#1DA1F2] transition-colors">
+                  <Twitter size={24} />
+                </Link>
+                <Link href="mailto:your-email@example.com" className="text-fg-muted hover:text-[#EA4335] transition-colors">
+                  <Mail size={24} />
+                </Link>
+              </div>
+              <p className="text-xs text-fg-muted tracking-wide uppercase">© 2026 Pratap Singh</p>
             </motion.div>
           </motion.div>
         )}

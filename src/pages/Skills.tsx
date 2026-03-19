@@ -1,6 +1,5 @@
 import { FadeInStagger, FadeInStaggerItem } from '@/components/FadeIn';
 import { skillGroups } from '@/lib/skills';
-import Image from 'next/image';
 
 const skillToIcon: Record<string, string> = {
   "TypeScript": "ts",
@@ -24,7 +23,7 @@ const skillToIcon: Record<string, string> = {
   "Firebase": "firebase",
   "Appwrite": "appwrite",
   "GraphQL": "graphql",
-  "REST API": "postman", // Fallback to postman for API
+  "REST API": "postman",
   "Git": "git",
   "Docker": "docker",
   "AWS": "aws",
@@ -35,7 +34,7 @@ const skillToIcon: Record<string, string> = {
   "Postman": "postman"
 };
 
-export default function SkillsPage() {
+export default function Skills() {
   return (
     <FadeInStagger className="space-y-16 pb-24">
       <FadeInStaggerItem className="space-y-4">
@@ -55,9 +54,9 @@ export default function SkillsPage() {
               {group.skills.map((skill) => (
                 <div
                   key={skill}
-                  className="cursor-pointer flex items-center gap-3 px-3 py-2.5 rounded-xl border border-border bg-bg-card/30 hover:bg-bg-hover hover:border-fg-muted/30 transition-all cursor-default"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-xl border border-border bg-bg-card/30 hover:bg-bg-hover hover:border-fg-muted/30 transition-all cursor-default"
                 >
-                  <div className=" relative w-6 h-6 shrink-0">
+                  <div className="relative w-6 h-6 shrink-0">
                     {skillToIcon[skill] && (
                       <img
                         src={`https://skillicons.dev/icons?i=${skillToIcon[skill]}`}
@@ -66,7 +65,6 @@ export default function SkillsPage() {
                       />
                     )}
                   </div>
-                  {/* Changed text color to be visible directly without hover */}
                   <span className="text-sm font-medium text-fg truncate">
                     {skill}
                   </span>

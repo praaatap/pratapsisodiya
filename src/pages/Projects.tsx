@@ -1,17 +1,16 @@
 import { FadeInStagger, FadeInStaggerItem } from '@/components/FadeIn';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { projects } from '@/lib/projects';
 
-export default function ProjectsPage() {
-  // Extract unique categories, defaulting to 'Other' if not present
-  const categories = Array.from(new Set(projects.map(p => (p as any).category || 'Other')));
+export default function Projects() {
+  const categories = Array.from(new Set(projects.map(p => (p as { category?: string }).category || 'Other')));
 
   return (
     <FadeInStagger className="space-y-12">
       <FadeInStaggerItem>
         <h1 className="text-3xl font-semibold tracking-tight mb-2">Projects</h1>
         <p className="text-fg-muted text-sm sm:text-base">
-          A selection of personal and open-source projects I&apos;ve been working on, categorized by technology.
+          A selection of personal and open-source projects I've been working on, categorized by technology.
         </p>
       </FadeInStaggerItem>
 
@@ -22,10 +21,10 @@ export default function ProjectsPage() {
               {category as string}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2">
-              {projects.filter(p => ((p as any).category || 'Other') === category).map((project) => (
+              {projects.filter(p => ((p as { category?: string }).category || 'Other') === category).map((project) => (
                 <Link
                   key={project.id}
-                  href={`/projects/${project.id}`}
+                  to={`/projects/${project.id}`}
                   className="group flex flex-col justify-between h-full py-4 px-3 -mx-3 rounded-lg hover:bg-bg-hover transition-colors"
                 >
                   <div>

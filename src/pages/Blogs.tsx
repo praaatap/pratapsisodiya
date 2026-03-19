@@ -1,8 +1,8 @@
 import { FadeInStagger, FadeInStaggerItem } from '@/components/FadeIn';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { getBlogPosts } from '@/lib/blogs';
 
-export default function BlogsPage() {
+export default function Blogs() {
   const posts = getBlogPosts();
 
   return (
@@ -18,7 +18,7 @@ export default function BlogsPage() {
         {posts.map((post) => (
           <FadeInStaggerItem key={post.slug}>
             <Link
-              href={`/blogs/${post.slug}`}
+              to={`/blogs/${post.slug}`}
               className="group flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 py-5 hover:opacity-80 transition-opacity"
             >
               <h3 className="text-base font-medium text-[var(--fg)] group-hover:underline underline-offset-4 decoration-[var(--fg-muted)]">

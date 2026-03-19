@@ -42,7 +42,7 @@ const jobs = [
   },
 ];
 
-export default function ExperiencePage() {
+export default function Experience() {
   return (
     <FadeInStagger className="space-y-8">
       <FadeInStaggerItem>
@@ -55,7 +55,6 @@ export default function ExperiencePage() {
       <div className="flex flex-col gap-10">
         {jobs.map((job, i) => (
           <FadeInStaggerItem key={i} className="relative pl-5 border-l border-border">
-            {/* Timeline dot */}
             <div className="absolute w-2.5 h-2.5 rounded-full border-2 border-fg-muted bg-bg -left-[5.5px] top-1.5" />
 
             <div className="mb-3">

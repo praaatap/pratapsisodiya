@@ -4,14 +4,14 @@ export const certifications = [
     issuer: "Red Hat",
     title: "Python Programming with Red Hat (AD141 - RHA) - Ver. 9.0",
     date: "Dec 2025",
-    link: "#", // Replace with your actual credential link
+    link: "#",
   },
   {
     id: "azure-admin",
     issuer: "Microsoft",
     title: "Microsoft Certified: Azure Administrator Associate",
     date: "Nov 2025",
-    link: "#", // e.g., link to Credential ID 502341D05549647D
+    link: "#",
   },
   {
     id: "oracle-oci-foundations",
@@ -32,7 +32,7 @@ export const certifications = [
     issuer: "Microsoft",
     title: "Microsoft Certified: Azure Fundamentals",
     date: "Jun 2025",
-    link: "#", // e.g., link to Credential ID 8DC40C5BD39F9AAA
+    link: "#",
   },
   {
     id: "github-foundations",

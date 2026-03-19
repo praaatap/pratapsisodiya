@@ -54,7 +54,7 @@ export default function Skills() {
               {group.skills.map((skill) => (
                 <div
                   key={skill}
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-xl border border-border bg-bg-card/30 transition-all"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-xl border border-border bg-bg-card/30 hover:bg-bg-hover hover:border-fg-muted/30 transition-all"
                 >
                   <div className="relative w-6 h-6 shrink-0">
                     {skillToIcon[skill] && (

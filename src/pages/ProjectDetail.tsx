@@ -25,7 +25,7 @@ export default function ProjectDetail() {
         <a href={project.link} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-4 py-2 bg-bg-hover border border-border rounded-md text-sm hover:bg-white hover:text-black transition-colors">
           <ExternalLink size={16} /> Live Demo
         </a>
-        <a href={project.link} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-4 py-2 text-fg-muted border border-border rounded-md text-sm hover:text-white transition-colors">
+        <a href={project.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-4 py-2 text-fg-muted border border-border rounded-md text-sm hover:text-white transition-colors">
           <Github size={16} /> Source Code
         </a>
       </FadeInStaggerItem>

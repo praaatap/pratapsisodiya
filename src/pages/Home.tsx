@@ -1,5 +1,5 @@
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { FadeInStagger, FadeInStaggerItem } from "@/components/FadeIn";
 
 export default function Home() {
@@ -64,7 +64,7 @@ export default function Home() {
           ].map(({ href, title, desc }) => (
             <Link
               key={href}
-              href={href}
+              to={href}
               className="group flex flex-col gap-1 py-3 px-3 -mx-3 rounded-lg hover:bg-bg-hover transition-colors"
             >
               <span className="font-medium text-fg text-sm group-hover:underline underline-offset-4 decoration-fg-muted">

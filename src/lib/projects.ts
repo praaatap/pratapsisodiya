@@ -3,7 +3,8 @@ export const projects = [
     id: "ai-assistant",
     title: "AI Code Assistant",
     description: "A terminal-based AI that understands your codebase and helps you write features faster.",
-    link: "https://github.com/example/ai-assistant",
+    link: "https://example.com/ai-assistant",
+    github: "https://github.com/example/ai-assistant",
     tags: ["React", "TypeScript", "Node.js"],
     category: "Fullstack"
   },
@@ -11,7 +12,8 @@ export const projects = [
     id: "notion-analytics",
     title: "Notion Analytics",
     description: "Privacy-focused analytics tailored for Notion workspace administrators.",
-    link: "https://github.com/example/notion-analytics",
+    link: "https://example.com/notion-analytics",
+    github: "https://github.com/example/notion-analytics",
     tags: ["Next.js", "TailwindCSS", "PostgreSQL"],
     category: "Fullstack"
   },
@@ -19,7 +21,8 @@ export const projects = [
     id: "minimal-tasks",
     title: "Minimal Tasks",
     description: "A very simple, keyboard-focused task manager built with React and IndexedDB.",
-    link: "https://github.com/example/minimal-tasks",
+    link: "https://example.com/minimal-tasks",
+    github: "https://github.com/example/minimal-tasks",
     tags: ["React", "IndexedDB", "Framer Motion"],
     category: "Frontend"
   },
@@ -27,7 +30,8 @@ export const projects = [
     id: "mcp-tools",
     title: "MCP Tools Suite",
     description: "A collection of tools implementing the new Model Context Protocol.",
-    link: "https://github.com/example/mcp-tools",
+    link: "https://example.com/mcp-tools",
+    github: "https://github.com/example/mcp-tools",
     tags: ["Python", "MCP", "AI"],
     category: "Tools & AI"
   }

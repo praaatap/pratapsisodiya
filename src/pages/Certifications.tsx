@@ -1,10 +1,8 @@
 import { FadeInStagger, FadeInStaggerItem } from '@/components/FadeIn';
 import { certifications } from '@/lib/certifications';
 import { ExternalLink, CheckCircle2 } from 'lucide-react';
-import Link from 'next/link';
 
-export default function CertificationsPage() {
-  // Group certifications by issuer
+export default function Certifications() {
   const issuers = Array.from(new Set(certifications.map(c => c.issuer)));
 
   return (
@@ -46,14 +44,15 @@ export default function CertificationsPage() {
                   </div>
 
                   {cert.link !== "#" && (
-                    <Link 
+                    <a 
                       href={cert.link} 
-                      target="_blank" 
+                      target="_blank"
+                      rel="noreferrer"
                       className="ml-4 p-2 rounded-md hover:bg-bg text-fg-muted hover:text-fg transition-all"
                       title="Verify Credential"
                     >
                       <ExternalLink className="w-4 h-4" />
-                    </Link>
+                    </a>
                   )}
                 </div>
               ))}

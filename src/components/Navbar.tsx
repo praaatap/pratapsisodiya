@@ -1,21 +1,16 @@
-"use client";
-
 import { useState, useEffect } from "react";
-import Link from 'next/link';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Github, Linkedin, Twitter, Mail } from 'lucide-react';
 import { motion, AnimatePresence } from "framer-motion";
-import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
+  const location = useLocation();
 
-  // Close menu on route change
   useEffect(() => {
     setIsOpen(false);
-  }, [pathname]);
+  }, [location.pathname]);
 
-  // Prevent scrolling when menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -36,7 +31,7 @@ export default function Navbar() {
     <>
       <header className="sticky top-0 z-50 bg-bg/80 backdrop-blur-md border-b border-border">
         <nav className="max-w-2xl mx-auto px-5 sm:px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="font-semibold text-lg hover:opacity-80 transition-opacity">
+          <Link to="/" className="font-semibold text-lg hover:opacity-80 transition-opacity">
             Pratap.
           </Link>
           
@@ -45,8 +40,8 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <Link 
                 key={link.href} 
-                href={link.href} 
-                className={`hover:text-fg transition-colors ${pathname === link.href ? 'text-fg' : ''}`}
+                to={link.href} 
+                className={`hover:text-fg transition-colors ${location.pathname === link.href ? 'text-fg' : ''}`}
               >
                 {link.name}
               </Link>
@@ -83,7 +78,7 @@ export default function Navbar() {
                   transition={{ delay: i * 0.05 }}
                 >
                   <Link 
-                    href={link.href} 
+                    to={link.href} 
                     className="text-2xl font-semibold tracking-tight hover:text-fg-muted transition-colors flex items-center justify-between group py-2"
                   >
                     <span>{link.name}</span>
@@ -100,18 +95,18 @@ export default function Navbar() {
               className="mt-auto pb-12 space-y-6"
             >
               <div className="flex items-center gap-6">
-                <Link href="https://github.com/praaatap" target="_blank" className="text-fg-muted hover:text-white transition-colors">
+                <a href="https://github.com/praaatap" target="_blank" rel="noreferrer" className="text-fg-muted hover:text-white transition-colors">
                   <Github size={24} />
-                </Link>
-                <Link href="https://www.linkedin.com/in/singhpratap999/" target="_blank" className="text-fg-muted hover:text-[#0A66C2] transition-colors">
+                </a>
+                <a href="https://www.linkedin.com/in/singhpratap999/" target="_blank" rel="noreferrer" className="text-fg-muted hover:text-[#0A66C2] transition-colors">
                   <Linkedin size={24} />
-                </Link>
-                <Link href="https://x.com/itspratap9" target="_blank" className="text-fg-muted hover:text-[#1DA1F2] transition-colors">
+                </a>
+                <a href="https://x.com/itspratap9" target="_blank" rel="noreferrer" className="text-fg-muted hover:text-[#1DA1F2] transition-colors">
                   <Twitter size={24} />
-                </Link>
-                <Link href="mailto:your-email@example.com" className="text-fg-muted hover:text-[#EA4335] transition-colors">
+                </a>
+                <a href="mailto:hello@pratap.dev" className="text-fg-muted hover:text-[#EA4335] transition-colors">
                   <Mail size={24} />
-                </Link>
+                </a>
               </div>
               <p className="text-xs text-fg-muted tracking-wide uppercase">© 2026 Pratap Singh</p>
             </motion.div>

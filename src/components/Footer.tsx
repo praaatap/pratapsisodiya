@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 
 export default function Footer() {
@@ -23,7 +22,7 @@ export default function Footer() {
     },
     {
       name: "Email",
-      href: "mailto:your-email@example.com", // Replace with actual email
+      href: "mailto:hello@pratap.dev",
       icon: Mail,
       color: "hover:text-[#EA4335]",
     },
@@ -36,22 +35,22 @@ export default function Footer() {
           © {new Date().getFullYear()} Pratap Singh
         </p>
         <p className="text-xs text-fg-muted">
-          Building in the open with Next.js.
+          Building in the open with React.
         </p>
       </div>
       
       <div className="flex items-center gap-6">
         {socials.map((social) => (
-          <Link
+          <a
             key={social.name}
             href={social.href}
-            target="_blank"
+            target={social.href.startsWith("mailto") ? undefined : "_blank"}
             rel="noreferrer"
             aria-label={social.name}
             className={`text-fg-muted ${social.color} transition-all duration-300 hover:scale-110 active:scale-95`}
           >
             <social.icon size={20} />
-          </Link>
+          </a>
         ))}
       </div>
     </footer>
